@@ -1,0 +1,4 @@
+{
+  "aml_data": "data/processed/formatted_transactions.csv",
+  "target_column": "label"
+}

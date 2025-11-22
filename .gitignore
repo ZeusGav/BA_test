@@ -1,19 +1,27 @@
-
+# Python
 __pycache__/
 *.py[cod]
-*.pkl
-*.pickle
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
 
-.venv/
-env/
-venv/
-
+# Jupyter
 .ipynb_checkpoints/
-notebooks_outputs/
 
-# data and models: keep folder, ignore contents
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Project-specific large artifacts
 data/*
 !data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 
 models/*
 !models/.gitkeep
@@ -23,9 +31,3 @@ shap_outputs/*
 
 llm_outputs/*
 !llm_outputs/.gitkeep
-
-.DS_Store
-*.log
-
-dist/
-build/
