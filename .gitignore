@@ -1,4 +1,4 @@
-# Python
+# Python cache and build artifacts
 __pycache__/
 *.py[cod]
 *.pyo
@@ -8,13 +8,13 @@ __pycache__/
 dist/
 build/
 
-# Jupyter
+# Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# OS
+# OS files
 .DS_Store
 
-# Logs
+# Log files
 *.log
 
 # Project-specific large artifacts

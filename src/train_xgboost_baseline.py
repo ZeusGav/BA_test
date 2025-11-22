@@ -1,3 +1,4 @@
+
 import json
 import os
 
@@ -10,7 +11,7 @@ from xgboost import XGBClassifier
 
 
 def main():
-    # 1) Config wie im Multi-GNN-Repo: zentraler Verweis auf AML-Daten
+    # 1) Load configuration for AML dataset path and target column
     with open("data_config.json", "r") as f:
         cfg = json.load(f)
 
@@ -20,7 +21,7 @@ def main():
     if not os.path.exists(data_path):
         raise FileNotFoundError(f"Formatted dataset not found at: {data_path}")
 
-    # 2) Daten laden
+    # 2) Load data and split into features and target
     df = pd.read_csv(data_path)
 
     if target_column not in df.columns:
@@ -29,7 +30,7 @@ def main():
     X = df.drop(columns=[target_column])
     y = df[target_column].astype(int)
 
-    # 3) Train/Test-Split (stratifiziert, damit Klassenschieflage respektiert wird)
+    # 3) Train/test split (stratified to respect class imbalance)
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,
@@ -38,12 +39,12 @@ def main():
         stratify=y,
     )
 
-    # 4) Class-Imbalance via scale_pos_weight grob adressieren
+    # 4) Handle class imbalance via scale_pos_weight
     pos = y_train.sum()
     neg = len(y_train) - pos
     scale_pos_weight = neg / pos if pos > 0 else 1.0
 
-    # 5) XGBoost-Baseline – bewusst einfach und nachvollziehbar konfiguriert
+    # 5) Define a clear, interpretable XGBoost baseline model
     model = XGBClassifier(
         n_estimators=400,
         max_depth=6,
@@ -51,7 +52,7 @@ def main():
         subsample=0.8,
         colsample_bytree=0.8,
         eval_metric="logloss",
-        tree_method="hist",  # GPU/CPU-freundlich, gut skalierbar
+        tree_method="hist",
         random_state=42,
         n_jobs=-1,
         scale_pos_weight=scale_pos_weight,
@@ -59,7 +60,7 @@ def main():
 
     model.fit(X_train, y_train)
 
-    # 6) Auswertung: ROC-AUC + PR-AUC (Average Precision) – beides gängig in AML-Settings
+    # 6) Evaluate using ROC-AUC and PR-AUC (average precision)
     proba_test = model.predict_proba(X_test)[:, 1]
     roc_auc = roc_auc_score(y_test, proba_test)
     pr_auc = average_precision_score(y_test, proba_test)
@@ -68,7 +69,7 @@ def main():
     print(f"Test PR-AUC : {pr_auc:.4f}")
     print(f"Positive share train: {y_train.mean():.6f}, test: {y_test.mean():.6f}")
 
-    # 7) Modell + Metriken speichern (für SHAP & LLM-Layer)
+    # 7) Save model and metrics for later SHAP and LLM-based explanations
     os.makedirs("models", exist_ok=True)
     model_path = os.path.join("models", "xgb_hi_small_baseline.pkl")
     metrics_path = os.path.join("models", "xgb_hi_small_baseline_metrics.json")
