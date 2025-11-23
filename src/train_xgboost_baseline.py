@@ -27,7 +27,11 @@ def main():
     if target_column not in df.columns:
         raise ValueError(f"Target column '{target_column}' not found in dataset.")
 
-    X = df.drop(columns=[target_column])
+    drop_cols = [target_column]
+    if "transaction_id" in df.columns:
+        drop_cols.append("transaction_id")
+
+    X = df.drop(columns=drop_cols)
     y = df[target_column].astype(int)
 
     # 3) Train/test split (stratified to respect class imbalance)
