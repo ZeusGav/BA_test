@@ -31,7 +31,7 @@ def format_hi_small(transactions_path: str,
 
     if "Is Laundering" not in df.columns:
         raise ValueError("Column 'Is Laundering' not found in transactions file.")
-    
+
     # 1b) Add a stable transaction identifier for downstream SHAP/LLM/UI
     # Use the original row index so each transaction gets a unique ID.
     df["transaction_id"] = df.index
