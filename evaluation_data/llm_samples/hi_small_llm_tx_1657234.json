@@ -1,0 +1,32 @@
+{
+  "probability": 0.029458973556756973,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.3850791454315186
+    },
+    {
+      "feature": "Amount Received",
+      "value": 373.11,
+      "shap_value": -0.9859129786491394
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.5461205244064331
+    },
+    {
+      "feature": "Hour",
+      "value": 17.0,
+      "shap_value": -0.46108293533325195
+    },
+    {
+      "feature": "Payment Format_Cash",
+      "value": 1.0,
+      "shap_value": -0.3071429431438446
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (suspiciousness probability 0.0295) because the recorded attributes align with patterns the monitoring system associates with lower risk. No high-risk indicators appear among the top contributing factors.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH payment contributes to decreased suspicion.\n- Payment Format_Cash = 1.0 \u2014 presence of a cash payment indicator, in this context, contributes to decreased suspicion.\n- Amount Received = 373.11 \u2014 a moderate amount that reduces suspicion relative to higher-risk amounts.\n- Weekday = 4.0 \u2014 occurring on a weekday (Thursday) aligns with lower-risk activity patterns.\n- Hour = 17.0 \u2014 late-afternoon timing (5:00 PM) aligns with typical business hours and reduces suspicion."
+}

@@ -1,0 +1,32 @@
+{
+  "probability": 0.019972922280430794,
+  "top_features": [
+    {
+      "feature": "Amount Received",
+      "value": 83.83,
+      "shap_value": -0.8974623084068298
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 83.83,
+      "shap_value": -0.753654956817627
+    },
+    {
+      "feature": "Hour",
+      "value": 3.0,
+      "shap_value": -0.6413459777832031
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.48926565051078796
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.47115814685821533
+    }
+  ],
+  "explanation_short": "The transaction has a low suspiciousness probability (0.02) because the observed attributes reduce indicators of risk. The payment amount, timing, weekday and use of a credit card are each associated with lower risk in the current monitoring context.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Amount Received = 83.83 \u2014 a modest incoming amount that does not elevate risk relative to typical thresholds.\n- Amount Paid = 83.83 \u2014 the paid amount matches the received amount, suggesting a straightforward, non-layered flow.\n- Hour = 3.0 \u2014 the transaction time (03:00) is, in this context, linked to lower risk for this account/product.\n- Payment Format_Credit Card = 1.0 \u2014 credit card use reduces anonymity and is therefore associated with lower transactional risk."
+}

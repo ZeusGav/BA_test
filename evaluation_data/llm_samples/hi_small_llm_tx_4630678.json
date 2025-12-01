@@ -1,0 +1,32 @@
+{
+  "probability": 0.16003070771694183,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.5443294048309326
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 1351.4,
+      "shap_value": 0.5058980584144592
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.4198151230812073
+    },
+    {
+      "feature": "Amount Received",
+      "value": 1351.4,
+      "shap_value": -0.2904593348503113
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.16661106050014496
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (approximately 16% suspiciousness) because several attributes point toward routine, documentable activity while one attribute (the transaction amount) raises moderate attention; overall the factors that reduce concern outweigh the factor that increases it. The result is a low but non-zero level of scrutiny recommended for standard review.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH involvement aligns with lower concern in this case.\n- Amount Paid = 1,351.40 \u2014 the monetary value is moderately elevated and increases the need for attention.\n- Weekday = 4.0 \u2014 transaction occurring on a weekday is consistent with normal business activity and reduces concern.\n- Amount Received = 1,351.40 \u2014 the received amount matches the paid amount, which decreases concern about unexplained value flows.\n- Payment Format_Cheque = 1.0 \u2014 use of cheque payment is associated here with greater traceability and reduces suspicion."
+}

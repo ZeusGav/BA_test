@@ -1,0 +1,32 @@
+{
+  "probability": 7.084475510055199e-05,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.702597141265869
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.4364590644836426
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 3.65,
+      "shap_value": -2.379847526550293
+    },
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -1.5612903833389282
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -0.8076759576797485
+    }
+  ],
+  "explanation_short": "This transaction is assessed as very low risk (probability 0.0001) because the observed attributes align with routine, low-value activity and no external counterparty exposure. The combination of same-account and same-bank movement, a small amount, a midnight timestamp, and a non-ACH payment format all reduce suspicion.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0 \u2014 decreases suspicion: funds moved within the same account, indicating no external counterparty exposure.\n- SameBank = 1.0 \u2014 decreases suspicion: both sides held at the same bank, reducing cross-institutional complexity.\n- Amount Paid = 3.65 \u2014 decreases suspicion: very low monetary value consistent with routine transactions.\n- Hour = 0.0 \u2014 decreases suspicion: timestamp at hour 0, consistent with scheduled or routine processing.\n- Payment Format_ACH = 0.0 \u2014 decreases suspicion: payment is not in ACH format, associated here with lower risk."
+}

@@ -1,0 +1,32 @@
+{
+  "probability": 0.039790987968444824,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.4228097200393677
+    },
+    {
+      "feature": "Amount Received",
+      "value": 484.64,
+      "shap_value": -0.9099024534225464
+    },
+    {
+      "feature": "Hour",
+      "value": 7.0,
+      "shap_value": -0.40999945998191833
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.2821007966995239
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.28179556131362915
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (3.98%) because the observed attributes align with patterns our monitoring treats as lower risk. The payment method, moderate amount, timing, and absence of ACH characteristics each reduce indicators of concern for this item.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_Cheque = 1.0: cheque payment is present and is associated with more traceable, lower-risk activity in this context.\n- Payment Format_ACH = 0.0: no ACH transfer detected, which reduces exposure to certain higher-risk transfer patterns.\n- Amount Received = 484.64: the transaction amount is moderate and below thresholds typically linked to elevated scrutiny.\n- Hour = 7.0: the transaction time (07:00) aligns with routine operating hours and is not indicative of unusually timed activity.\n- Weekday = 4.0: occurring during a mid-to-late-week day, consistent with normal account behavior and reducing indicators of atypical timing."
+}

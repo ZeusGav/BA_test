@@ -1,0 +1,32 @@
+{
+  "probability": 0.00024201584164984524,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.680875778198242
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.5139760971069336
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.4765675067901611
+    },
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -1.1780894994735718
+    },
+    {
+      "feature": "Amount Received",
+      "value": 445.26,
+      "shap_value": -0.7399631142616272
+    }
+  ],
+  "explanation_short": "This transaction is assigned a very low suspiciousness probability because its attributes align with routine, lower-risk activity: the sender and recipient are the same account and within the same bank, the payment format and timing are consistent with normal operations, and the amount is modest. Taken together, these factors reduce indicators typically associated with money-laundering risk.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0: funds are sent from and to the same account, which reduces indicators of third\u2011party layering or external movement.\n- SameBank = 1.0: the payment remains within the same bank, lowering cross-institution transfer risk.\n- Payment Format_ACH = 0.0: the payment format is not flagged as a higher-risk instrument, which decreases concern.\n- Hour = 0.0: the transaction time falls within typical/expected hours for this account, reducing timing-related anomalies.\n- Amount Received = 445.26: the received amount is relatively small and consistent with routine activity, which lowers amount-based risk."
+}

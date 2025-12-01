@@ -1,0 +1,32 @@
+{
+  "probability": 0.06923864781856537,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.6965699195861816
+    },
+    {
+      "feature": "Amount Received",
+      "value": 2993.86,
+      "shap_value": -0.9638370275497437
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 2993.86,
+      "shap_value": 0.9023449420928955
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5004590749740601
+    },
+    {
+      "feature": "Weekday",
+      "value": 2.0,
+      "shap_value": -0.4303171634674072
+    }
+  ],
+  "explanation_short": "The suspiciousness probability of 0.0692 indicates a low level of concern for this transaction based on the available indicators. Most of the top factors for this record point toward lower risk, though the outgoing payment amount warrants modest additional attention.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Amount Paid = 2993.86 \u2014 this outgoing payment contributes to increased attention; comparable outgoing flows can be relevant for passthrough or layering reviews.\n- Amount Received = 2993.86 \u2014 the received amount is moderate and, in this context, contributes to lowering suspicion.\n- Payment Format_Cheque = 1.0 and Payment Format_ACH = 0.0 \u2014 the transaction was processed by cheque rather than ACH, which in this instance is associated with reduced concern.\n- Weekday = 2.0 \u2014 the activity occurred on a normal business day, which tends to reduce indicators of unusual timing."
+}

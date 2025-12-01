@@ -1,0 +1,32 @@
+{
+  "probability": 0.01978529430925846,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -2.163986921310425
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.7275504469871521
+    },
+    {
+      "feature": "Receiving Currency_Canadian Dollar",
+      "value": 1.0,
+      "shap_value": -0.5387980341911316
+    },
+    {
+      "feature": "Weekday",
+      "value": 0.0,
+      "shap_value": -0.4789193272590637
+    },
+    {
+      "feature": "Hour",
+      "value": 7.0,
+      "shap_value": -0.45728081464767456
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk with a suspiciousness probability of 0.0198 (1.98%). The payment method, receiving currency, and the reported timing are all characteristics that align with lower-risk profiles.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 ACH was not used for this payment, a characteristic that here corresponds with decreased suspicion.\n- Payment Format_Credit Card = 1.0 \u2014 the transaction was processed by credit card, which is generally more traceable and therefore associated with lower risk.\n- Receiving Currency_Canadian Dollar = 1.0 \u2014 the funds are denominated in Canadian dollars, a currency profile here linked to reduced concern.\n- Weekday = 0.0 \u2014 the transaction occurred on a day that is associated with lower risk levels.\n- Hour = 7.0 \u2014 the transaction time (hour 7) falls in a period that corresponds with decreased suspicion."
+}

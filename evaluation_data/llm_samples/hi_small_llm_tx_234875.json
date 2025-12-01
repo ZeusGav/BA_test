@@ -1,0 +1,32 @@
+{
+  "probability": 7.253359217429534e-05,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.8720972537994385
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.602722644805908
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.5641212463378906
+    },
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -0.8980953097343445
+    },
+    {
+      "feature": "Receiving Currency_Ruble",
+      "value": 1.0,
+      "shap_value": -0.601850152015686
+    }
+  ],
+  "explanation_short": "The transaction is assessed as very low risk (suspicion probability 0.01%), because multiple transaction attributes align with normal, expected behavior rather than anomalous patterns. Key indicators such as same account and same bank routing, a common payment format and timing, and receipt in rubles collectively reduce the level of concern.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0 \u2014 decreases suspicion: movement occurs within the same account relationship, reducing indications of third-party routing or layering.\n- SameBank = 1.0 \u2014 decreases suspicion: funds remain within a single banking institution, lowering complexity and cross-bank obfuscation risk.\n- Payment Format_ACH = 0.0 \u2014 decreases suspicion: the payment uses a common, traceable clearing format, consistent with routine transaction flows.\n- Hour = 0.0 \u2014 decreases suspicion: timing of the transaction falls within expected/typical hours, not indicative of unusual behavior.\n- Receiving Currency_Ruble = 1.0 \u2014 decreases suspicion: currency is consistent with the counterparties\u2019 expected profile or jurisdiction, reducing currency-mismatch concerns."
+}

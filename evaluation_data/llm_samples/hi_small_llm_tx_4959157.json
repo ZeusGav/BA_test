@@ -1,0 +1,32 @@
+{
+  "probability": 0.2841208875179291,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.2672499418258667
+    },
+    {
+      "feature": "Amount Received",
+      "value": 176.52,
+      "shap_value": 0.31106242537498474
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 176.52,
+      "shap_value": -0.28242164850234985
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.27222564816474915
+    },
+    {
+      "feature": "Weekend",
+      "value": 1.0,
+      "shap_value": 0.11529400944709778
+    }
+  ],
+  "explanation_short": "This transaction received a 28.41% suspiciousness score, indicating a relatively low but not negligible level of concern based on the transaction\u2019s attributes and timing. Several attributes reduce concern (credit\u2011card payment, not ACH, matching paid amount) while the amount received and weekend timing modestly increase it.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 payment was not processed via ACH; the absence of ACH-related indicators reduces immediate concern in this case.\n- Amount Received = $176.52 \u2014 the received amount contributes to increased concern relative to other lower-risk transactions and therefore warrants attention.\n- Amount Paid = $176.52 \u2014 the paid amount matches the received amount, which reduces concern because it suggests a direct, one-to-one transfer rather than complex movement of funds.\n- Payment Format_Credit Card = 1.0 \u2014 payment was made by credit card, which decreases concern due to higher traceability and consumer protections associated with this method.\n- Weekend = 1.0 \u2014 transaction occurred on a weekend, which increases concern because such timing can coincide with reduced monitoring and historically higher-risk activity."
+}

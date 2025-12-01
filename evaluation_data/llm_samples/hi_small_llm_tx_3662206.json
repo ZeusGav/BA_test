@@ -1,0 +1,32 @@
+{
+  "probability": 0.2894577085971832,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.4304873943328857
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 1330.78,
+      "shap_value": 0.593781590461731
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.3410833477973938
+    },
+    {
+      "feature": "Weekday",
+      "value": 2.0,
+      "shap_value": -0.2946162521839142
+    },
+    {
+      "feature": "Hour",
+      "value": 20.0,
+      "shap_value": 0.28654342889785767
+    }
+  ],
+  "explanation_short": "This transaction has a relatively low suspiciousness score (0.2895). The moderately large payment amount and the late evening hour push the score upward, while the fact it is a cheque, not an ACH payment, and the weekday of the transaction reduce overall concern.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Amount Paid = 1330.78 (increases suspicion: higher monetary value increases monitoring relevance)\n- Hour = 20.0 (increases suspicion: late-evening timing is more atypical and raises attention)\n- Payment Format_Cheque = 1.0 (decreases suspicion: cheque payment here is associated with lower risk)\n- Payment Format_ACH = 0.0 (decreases suspicion: not an ACH transfer in this instance)\n- Weekday = 2.0 (decreases suspicion: timing within the week is associated with lower risk)"
+}

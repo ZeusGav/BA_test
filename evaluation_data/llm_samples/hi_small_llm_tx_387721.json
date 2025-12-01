@@ -1,0 +1,32 @@
+{
+  "probability": 0.0291111059486866,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.503175973892212
+    },
+    {
+      "feature": "Hour",
+      "value": 2.0,
+      "shap_value": -0.6218396425247192
+    },
+    {
+      "feature": "Payment Currency_Yuan",
+      "value": 1.0,
+      "shap_value": -0.5948160886764526
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5770425796508789
+    },
+    {
+      "feature": "Receiving Currency_Yuan",
+      "value": 1.0,
+      "shap_value": -0.53800368309021
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.0291) because the observed attributes are associated with lower risk. None of the listed factors increase concern in this assessment.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 ACH was not used, which is associated with reduced suspicion.\n- Hour = 2.0 \u2014 the transaction timestamp (02:00) is associated with lower concern in this context.\n- Payment Currency_Yuan = 1.0 \u2014 payment currency is yuan, a factor linked to decreased suspicion here.\n- Payment Format_Cheque = 1.0 \u2014 funds were sent by cheque, which in this assessment reduces risk indicators.\n- Receiving Currency_Yuan = 1.0 \u2014 receiving currency is yuan, which is associated with lower suspicion."
+}

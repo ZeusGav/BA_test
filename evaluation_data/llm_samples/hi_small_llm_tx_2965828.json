@@ -1,0 +1,32 @@
+{
+  "probability": 0.08210179209709167,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.7507978677749634
+    },
+    {
+      "feature": "Payment Format_Cash",
+      "value": 1.0,
+      "shap_value": -0.692500114440918
+    },
+    {
+      "feature": "Amount Received",
+      "value": 55287.58,
+      "shap_value": 0.6479691863059998
+    },
+    {
+      "feature": "Hour",
+      "value": 9.0,
+      "shap_value": -0.5613840818405151
+    },
+    {
+      "feature": "Weekday",
+      "value": 1.0,
+      "shap_value": -0.4510296881198883
+    }
+  ],
+  "explanation_short": "The assessed suspiciousness is low (8.21%) because several attributes associated with lower concern outweigh the effect of the transaction amount. The relatively large amount does raise risk, but timing and payment-format indicators reduce overall suspicion.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH payment is associated here with decreased suspicion.\n- Payment Format_Cash = 1.0 \u2014 presence of a cash payment is associated here with decreased suspicion.\n- Amount Received = 55,287.58 \u2014 the comparatively large amount increases suspicion.\n- Hour = 9.0 and Weekday = 1.0 \u2014 transaction occurring at 09:00 on a weekday is associated with decreased suspicion."
+}

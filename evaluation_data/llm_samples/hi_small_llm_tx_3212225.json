@@ -1,0 +1,32 @@
+{
+  "probability": 0.819326639175415,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 1.0,
+      "shap_value": 1.649423599243164
+    },
+    {
+      "feature": "Hour",
+      "value": 22.0,
+      "shap_value": -0.654233455657959
+    },
+    {
+      "feature": "Amount Received",
+      "value": 2713.62,
+      "shap_value": -0.6476435661315918
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 2713.62,
+      "shap_value": 0.6230584979057312
+    },
+    {
+      "feature": "Payment Currency_US Dollar",
+      "value": 1.0,
+      "shap_value": -0.15061837434768677
+    }
+  ],
+  "explanation_short": "This transaction is assessed as having a high likelihood of suspicious activity (0.8193) because several risk-increasing characteristics are present (notably an ACH payment and an outbound payment amount) while some mitigating characteristics partially offset risk. Overall, the elevating factors are stronger than the mitigating ones, producing the reported probability.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment format: ACH \u2014 increases suspicion (ACH payment format is treated as a risk-elevating characteristic).\n- Transaction time: 22:00 \u2014 decreases suspicion (late-evening timing here reduces relative concern).\n- Amount received: 2,713.62 \u2014 decreases suspicion (the received amount is assessed as less indicative of high risk).\n- Amount paid: 2,713.62 \u2014 increases suspicion (the outbound payment of this amount raises focus on the flow of funds).\n- Payment currency: US Dollar (USD) \u2014 decreases suspicion (USD reduces certain currency-related concerns)."
+}

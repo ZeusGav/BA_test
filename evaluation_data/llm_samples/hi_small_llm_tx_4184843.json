@@ -1,0 +1,32 @@
+{
+  "probability": 0.02479543350636959,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.6857291460037231
+    },
+    {
+      "feature": "Amount Received",
+      "value": 3735.49,
+      "shap_value": -1.143615484237671
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.8631715178489685
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 3735.49,
+      "shap_value": 0.755639910697937
+    },
+    {
+      "feature": "Receiving Currency_Swiss Franc",
+      "value": 1.0,
+      "shap_value": -0.6791836619377136
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk, with a suspiciousness probability of 0.0248, because several features associated with lower concern outweigh a single modest risk indicator. Payment via credit card, the absence of ACH, the transaction amount profile, and the receiving currency all contribute to lowering suspicion, while the reported Amount Paid produces a small countervailing signal.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH involvement here is associated with decreased concern.\n- Payment Format_Credit Card = 1.0 \u2014 use of a credit card is linked to lower risk in this assessment.\n- Amount Received = 3735.49 \u2014 the received amount is in a moderate range and contributes to reduced suspicion.\n- Amount Paid = 3735.49 \u2014 the paid amount at this level slightly increases concern and may warrant brief review.\n- Receiving Currency_Swiss Franc = 1.0 \u2014 receipt in Swiss francs is associated with decreased suspicion in this context."
+}

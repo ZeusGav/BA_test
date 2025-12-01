@@ -1,0 +1,32 @@
+{
+  "probability": 0.005312013439834118,
+  "top_features": [
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -1.5044103860855103
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 111.26,
+      "shap_value": -1.3579241037368774
+    },
+    {
+      "feature": "Amount Received",
+      "value": 111.26,
+      "shap_value": -0.7924184799194336
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -0.7366570830345154
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.511664092540741
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.53%), indicating low concern under routine monitoring. The probability is reduced by timing, payment format, and the small, matched amounts involved.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Hour = 0 (transaction occurred at midnight) \u2014 decreases suspicion\n- Amount Paid = 111.26 (modest value) \u2014 decreases suspicion\n- Amount Received = 111.26 (identical to amount paid) \u2014 decreases suspicion\n- Payment Format = ACH \u2014 decreases suspicion\n- Weekday = 4 (business-day timing) \u2014 decreases suspicion"
+}

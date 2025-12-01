@@ -1,0 +1,32 @@
+{
+  "probability": 0.001486562890931964,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.8631467819213867
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -2.2332913875579834
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.1867899894714355
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 8446.23,
+      "shap_value": 0.521159291267395
+    },
+    {
+      "feature": "Weekday",
+      "value": 3.0,
+      "shap_value": -0.23239974677562714
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (probability 0.15%) because several routine attributes reduce concern and outweigh a single higher-value element. Internal movement within the same account and bank, executed via ACH on a mid-week day, are consistent with ordinary activity, while the payment amount of $8,446.23 modestly increases the level of attention.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0 \u2014 transaction originates and settles within the same account, which decreases suspicion.\n- Payment Format_ACH = 0.0 \u2014 use of ACH payment format is associated with routine, lower-risk processing and decreases suspicion.\n- SameBank = 1.0 \u2014 movement within the same bank reduces counterparty risk and decreases suspicion.\n- Amount Paid = 8446.23 \u2014 higher transfer value increases attention and contributes to elevated suspicion relative to smaller amounts.\n- Weekday = 3.0 \u2014 occurring mid-week is consistent with normal business timing and decreases suspicion."
+}

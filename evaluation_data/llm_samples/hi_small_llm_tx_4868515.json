@@ -1,0 +1,32 @@
+{
+  "probability": 0.11313094198703766,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.1389068365097046
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.7988444566726685
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.3490181267261505
+    },
+    {
+      "feature": "Amount Received",
+      "value": 443.61,
+      "shap_value": -0.34198442101478577
+    },
+    {
+      "feature": "Receiving Currency_Swiss Franc",
+      "value": 1.0,
+      "shap_value": -0.20233054459095
+    }
+  ],
+  "explanation_short": "This transaction received a low suspiciousness probability (0.1131) because its recorded attributes align with lower-risk patterns. The payment was a credit-card transaction in Swiss francs on a weekday for a modest amount, and none of the top factors indicate elevated concern.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 No ACH payment is present, which here is associated with lower risk.\n- Payment Format_Credit Card = 1.0 \u2014 Payment by credit card, a common consumer channel, is linked to reduced suspicion in this context.\n- Weekday = 4.0 \u2014 The transaction occurred on a weekday rather than on atypical timing, which is generally less indicative of illicit activity.\n- Amount Received = 443.61 \u2014 The amount is moderate and does not reflect the higher-value transfers often associated with greater risk.\n- Receiving Currency_Swiss Franc = 1.0 \u2014 The receiving currency is Swiss francs, which in this assessment is not flagged as a high-risk currency."
+}

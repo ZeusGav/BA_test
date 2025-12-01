@@ -1,0 +1,32 @@
+{
+  "probability": 0.48487409949302673,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 1.0,
+      "shap_value": 1.1441681385040283
+    },
+    {
+      "feature": "Payment Currency_US Dollar",
+      "value": 1.0,
+      "shap_value": -0.7651614546775818
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 339248.3,
+      "shap_value": -0.5917844176292419
+    },
+    {
+      "feature": "Receiving Currency_US Dollar",
+      "value": 1.0,
+      "shap_value": -0.4061487019062042
+    },
+    {
+      "feature": "Hour",
+      "value": 23.0,
+      "shap_value": -0.3799578547477722
+    }
+  ],
+  "explanation_short": "The transaction receives a near\u2011threshold suspiciousness score (48.49%) because one characteristic increases concern while several others reduce it, producing a balanced assessment. The ACH payment method raises scrutiny, whereas payment/receiving in US dollars, the transaction amount, and the late hour all act to lower the overall suspicion in this case.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment format: ACH \u2014 increases suspicion due to the low-friction, account-to-account nature of the transfer.\n- Payment currency: US Dollar \u2014 decreases suspicion as USD is a commonly used and well-monitored currency.\n- Amount paid: 339,248.3 \u2014 decreases suspicion, indicating the size of the payment aligns with expected or typical high-value activity in this context.\n- Receiving currency: US Dollar \u2014 decreases suspicion for the same reasons as the payment currency.\n- Hour: 23 \u2014 decreases suspicion, reflecting that the transaction time is consistent with allowed or previously observed patterns."
+}

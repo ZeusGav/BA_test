@@ -1,0 +1,32 @@
+{
+  "probability": 0.0651136115193367,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.7581396102905273
+    },
+    {
+      "feature": "Amount Received",
+      "value": 2543.17,
+      "shap_value": -0.9377496242523193
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 2543.17,
+      "shap_value": 0.7524922490119934
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.4166637659072876
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.40556615591049194
+    }
+  ],
+  "explanation_short": "The reported suspiciousness probability is low (6.51%); overall, payment type, amount level, and timing point toward lower risk while one attribute (identical paid and received amounts) modestly raises concern. On balance the factors that decrease suspicion outweigh the factor that increases it.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 Not processed via ACH, a characteristic here associated with lower suspicion.\n- Payment Format_Cheque = 1.0 \u2014 Payment executed by cheque, which in this context reduces risk.\n- Amount Received = 2543.17 \u2014 The received amount is moderate and contributes to lower concern.\n- Amount Paid = 2543.17 \u2014 The paid amount equals the received amount, which mildly increases suspicion for matched or circular flows.\n- Weekday = 4.0 \u2014 Transaction timing on this weekday is associated with reduced risk."
+}

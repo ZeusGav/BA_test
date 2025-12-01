@@ -1,0 +1,32 @@
+{
+  "probability": 0.025511683896183968,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.2196629047393799
+    },
+    {
+      "feature": "Amount Received",
+      "value": 351.3,
+      "shap_value": -1.1159080266952515
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 351.3,
+      "shap_value": -0.6169698238372803
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.34173765778541565
+    },
+    {
+      "feature": "Weekday",
+      "value": 0.0,
+      "shap_value": -0.3399142324924469
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (suspiciousness probability 2.55%) because the payment attributes, timing, and amounts align with lower\u2011risk patterns in our monitoring criteria. Collectively these factors reduce indicators that would otherwise warrant escalation for further review.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH payment is associated here with lower risk.\n- Payment Format_Cheque = 1.0 \u2014 use of a cheque in this case aligns with lower\u2011risk payment behavior.\n- Amount Received = 351.3 \u2014 a moderate incoming amount that does not on its own raise concern.\n- Amount Paid = 351.3 \u2014 identical paid and received amounts reduce indicators of layering or structuring.\n- Weekday = 0.0 \u2014 the transaction timing corresponds to a lower\u2011risk timing pattern in our monitoring framework."
+}

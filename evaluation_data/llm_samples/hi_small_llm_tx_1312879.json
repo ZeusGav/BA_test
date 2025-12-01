@@ -1,0 +1,32 @@
+{
+  "probability": 0.2118416726589203,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 1.0,
+      "shap_value": 0.8162583708763123
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.7943703532218933
+    },
+    {
+      "feature": "Amount Received",
+      "value": 200.22,
+      "shap_value": -0.7501872181892395
+    },
+    {
+      "feature": "Hour",
+      "value": 5.0,
+      "shap_value": -0.5985957384109497
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 200.22,
+      "shap_value": -0.5825374722480774
+    }
+  ],
+  "explanation_short": "This transaction is assessed at a low-to-moderate level of concern (21.18%) because the ACH payment format raises an indicator of elevated risk while other transaction characteristics reduce overall suspicion. Relatively small, equal incoming and outgoing amounts and an early-week, early-hour timestamp are consistent with routine activity, lowering the score.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 1.0 \u2014 increases suspicion due to use of ACH, which can be associated with higher-risk account-to-account transfers.\n- Weekday = 4.0 and Hour = 5.0 \u2014 decrease suspicion as the timing aligns with routine processing windows rather than atypical patterns.\n- Amount Received = 200.22 and Amount Paid = 200.22 \u2014 decrease suspicion because the amounts are modest and matched, consistent with routine transfers rather than large or irregular flows."
+}

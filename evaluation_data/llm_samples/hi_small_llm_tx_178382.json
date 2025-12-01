@@ -1,0 +1,32 @@
+{
+  "probability": 0.00022846137289889157,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.9678590297698975
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.3394036293029785
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.7829662561416626
+    },
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -0.6938726902008057
+    },
+    {
+      "feature": "Weekday",
+      "value": 3.0,
+      "shap_value": -0.4661124646663666
+    }
+  ],
+  "explanation_short": "The transaction has a very low suspiciousness probability (0.0002) because its attributes are consistent with routine, low\u2011risk activity. In particular, it appears to be an intra\u2011account, intra\u2011bank ACH payment occurring at a time and weekday profile that reduces indicators of unusual behavior.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0 (decreases suspicion) \u2014 movement within the same account, reducing exposure to third\u2011party layering.\n- SameBank = 1.0 (decreases suspicion) \u2014 transaction stayed within the same bank, suggesting internal routing rather than external counterparties.\n- Payment Format_ACH = 0.0 (decreases suspicion) \u2014 ACH format associated with standard clearing and lower operational risk in this context.\n- Hour = 0.0 (decreases suspicion) \u2014 transaction timing falls into a time window associated with lower risk.\n- Weekday = 3.0 (decreases suspicion) \u2014 occurred on a weekday typically associated with normal business activity."
+}

@@ -1,0 +1,32 @@
+{
+  "probability": 0.20975610613822937,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.8327604532241821
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 5402.5,
+      "shap_value": 0.7326438426971436
+    },
+    {
+      "feature": "Amount Received",
+      "value": 5402.5,
+      "shap_value": -0.4452935457229614
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.33963543176651
+    },
+    {
+      "feature": "Hour",
+      "value": 17.0,
+      "shap_value": 0.09678959101438522
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low-to-moderate risk with a 20.98% probability of being suspicious. The score reflects a mix of elements that increase concern (transaction amount and timing) that are largely offset by features that reduce concern (payment by cheque, no ACH use, and a matching received amount).",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH usage reduces concern compared with cases that involve ACH.\n- Amount Paid = 5402.5 \u2014 the payment size is a factor that increases attention relative to smaller values.\n- Amount Received = 5402.5 \u2014 the received amount matches the paid amount, which reduces suspicion by indicating an offsetting flow.\n- Payment Format_Cheque = 1.0 \u2014 use of a cheque reduces concern relative to other payment channels.\n- Hour = 17.0 \u2014 transaction timing (around 17:00) modestly increases attention for review."
+}

@@ -1,0 +1,32 @@
+{
+  "probability": 0.03399449959397316,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.3208439350128174
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 149.95,
+      "shap_value": -1.2445762157440186
+    },
+    {
+      "feature": "Hour",
+      "value": 11.0,
+      "shap_value": -0.43978452682495117
+    },
+    {
+      "feature": "Amount Received",
+      "value": 149.95,
+      "shap_value": -0.43204841017723083
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.28215885162353516
+    }
+  ],
+  "explanation_short": "This transaction receives a low suspiciousness probability (3.4%) because it exhibits several routine characteristics \u2014 a cheque payment rather than ACH, modest and equal paid/received amounts, and timing during normal business hours. Based on the top reviewed attributes, there are no strong risk indicators identified.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment format: cheque present and ACH absent \u2014 decreases suspicion.\n- Amounts: Amount paid 149.95 and Amount received 149.95 (modest size and parity) \u2014 decreases suspicion.\n- Timing: Hour = 11:00 (mid\u2011morning, standard business hours) \u2014 decreases suspicion."
+}

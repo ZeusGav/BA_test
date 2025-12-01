@@ -1,0 +1,32 @@
+{
+  "probability": 0.05147848278284073,
+  "top_features": [
+    {
+      "feature": "Hour",
+      "value": 4.0,
+      "shap_value": -1.1138784885406494
+    },
+    {
+      "feature": "Amount Received",
+      "value": 84.11,
+      "shap_value": -0.8721083402633667
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -0.6690788269042969
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.4773293733596802
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 84.11,
+      "shap_value": -0.21448150277137756
+    }
+  ],
+  "explanation_short": "This transaction received a low suspiciousness probability (0.0515) because the recorded characteristics align with patterns that reduce concern. The amount is modest, the payment was made by credit card, and there is no ACH involvement, all of which lower the level of suspicion.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Hour = 4.0 \u2014 transaction time (04:00) is associated here with lower concern.\n- Amount Received = 84.11 \u2014 the received amount is modest, which reduces risk indicators.\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH transfer is associated with lower suspicion.\n- Payment Format_Credit Card = 1.0 \u2014 use of a credit card is associated with lower concern due to traceability and standard controls.\n- Amount Paid = 84.11 \u2014 paid amount matches received amount and is modest, reducing indicators of layering or value anomalies."
+}

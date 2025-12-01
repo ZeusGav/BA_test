@@ -1,0 +1,32 @@
+{
+  "probability": 0.00795047078281641,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.842661738395691
+    },
+    {
+      "feature": "Amount Received",
+      "value": 3813.07,
+      "shap_value": -1.2406827211380005
+    },
+    {
+      "feature": "Hour",
+      "value": 5.0,
+      "shap_value": -0.8234933018684387
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5985078811645508
+    },
+    {
+      "feature": "Receiving Currency_Brazil Real",
+      "value": 1.0,
+      "shap_value": -0.47349515557289124
+    }
+  ],
+  "explanation_short": "This transaction has a very low suspiciousness probability (0.0080) because the observed attributes align with lower-risk characteristics. The payment method (cheque), absence of ACH, moderate received amount, early-hour timing, and use of Brazil Real do not indicate heightened concern in this case.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH payment; associated here with lower risk.\n- Amount Received = 3813.07 \u2014 a moderate value that does not indicate high-value layering or structuring.\n- Hour = 5.0 \u2014 transaction occurred early in the day, which in this context is associated with lower risk.\n- Payment Format_Cheque = 1.0 \u2014 payment by cheque rather than an electronic transfer, reducing immediate concern.\n- Receiving Currency_Brazil Real = 1.0 \u2014 payment in Brazil Real does not increase risk for this profile."
+}

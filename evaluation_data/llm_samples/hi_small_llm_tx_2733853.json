@@ -1,0 +1,32 @@
+{
+  "probability": 0.96332186460495,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 1.0,
+      "shap_value": 1.7263537645339966
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 2336.72,
+      "shap_value": 1.2483643293380737
+    },
+    {
+      "feature": "Hour",
+      "value": 22.0,
+      "shap_value": -0.5221837162971497
+    },
+    {
+      "feature": "Weekday",
+      "value": 0.0,
+      "shap_value": 0.2073705494403839
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 0.0,
+      "shap_value": 0.13909858465194702
+    }
+  ],
+  "explanation_short": "The transaction is assessed as highly suspicious (probability 0.9633) because it was sent via ACH and involves a relatively large payment, both of which are associated with increased risk in our screening. The late hour (22:00) modestly reduces concern, but the weekday code and the absence of a cheque payment further raise suspicion.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 1.0 \u2014 presence of an ACH payment is associated with increased risk.\n- Amount Paid = 2336.72 \u2014 the transaction amount is relatively large and increases suspicion.\n- Weekday = 0.0 \u2014 occurring on weekday code 0 is associated with higher risk in monitoring.\n- Payment Format_Cheque = 0.0 \u2014 absence of a cheque payment (electronic format) is associated with increased risk.\n- Hour = 22.0 \u2014 transaction time at 22:00 slightly decreases the level of concern."
+}

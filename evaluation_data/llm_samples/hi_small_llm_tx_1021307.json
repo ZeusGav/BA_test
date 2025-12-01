@@ -1,0 +1,32 @@
+{
+  "probability": 0.04279564321041107,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.8218542337417603
+    },
+    {
+      "feature": "Amount Received",
+      "value": 4321.24,
+      "shap_value": -1.3560737371444702
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5246760845184326
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 4321.24,
+      "shap_value": 0.4338797628879547
+    },
+    {
+      "feature": "Hour",
+      "value": 21.0,
+      "shap_value": -0.33218708634376526
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (4.28%), primarily because it was processed as a cheque, not via ACH, occurred late in the evening, and involved a moderate incoming amount. The identical paid amount does introduce a limited increase in concern due to the immediate outbound of funds.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH activity lowers assessed suspicion.\n- Payment Format_Cheque = 1.0 \u2014 cheque payment lowers assessed suspicion.\n- Amount Received = 4321.24 \u2014 moderate incoming amount lowers assessed suspicion.\n- Amount Paid = 4321.24 \u2014 identical outgoing amount increases assessed suspicion (raises attention for immediate outbound flow).\n- Hour = 21.0 \u2014 transaction time (21:00) lowers assessed suspicion."
+}

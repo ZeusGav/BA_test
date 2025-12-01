@@ -1,0 +1,32 @@
+{
+  "probability": 0.02278563193976879,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.5663598775863647
+    },
+    {
+      "feature": "Amount Received",
+      "value": 417.42,
+      "shap_value": -0.6350904703140259
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 417.42,
+      "shap_value": -0.6081796288490295
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.48230189085006714
+    },
+    {
+      "feature": "Weekday",
+      "value": 2.0,
+      "shap_value": -0.4019564688205719
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (suspiciousness probability 0.0228) because it uses a common payment channel, the paid and received amounts are modest and identical, and it occurred on a typical weekday \u2014 characteristics more consistent with routine activity. These factors collectively reduce indicators of atypical or higher-risk behavior, although standard monitoring and any additional entity-level checks should continue.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH routing in this case is associated with lower risk compared with riskier payment channels.\n- Amount Received = 417.42 \u2014 a moderate received amount that is not unusually large, which decreases suspicion.\n- Amount Paid = 417.42 \u2014 identical paid and received amounts suggest a straightforward transaction flow, decreasing suspicion.\n- Payment Format_Credit Card = 1.0 \u2014 use of a credit card payment method here is associated with lower risk in this context.\n- Weekday = 2.0 \u2014 occurring on a regular weekday is consistent with routine business activity and reduces suspicion."
+}

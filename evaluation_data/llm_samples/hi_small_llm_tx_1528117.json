@@ -1,0 +1,32 @@
+{
+  "probability": 0.018639346584677696,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.6262961626052856
+    },
+    {
+      "feature": "Receiving Currency_Canadian Dollar",
+      "value": 1.0,
+      "shap_value": -1.034733533859253
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 39191.51,
+      "shap_value": -0.6831530928611755
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.6658208966255188
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.49529457092285156
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk because the available attributes align with lower-risk patterns: it was processed by credit card, not ACH, is denominated in Canadian dollars, occurred mid-week, and the payment amount is in the observed mid-range. No high-risk indicators are present among the top factors considered, which leads to a low suspiciousness probability.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment made by credit card, which in this profile reduces suspicion.\n- Not an ACH payment, the absence of ACH decreases suspicion.\n- Receiving currency is Canadian dollar, which decreases suspicion.\n- Payment amount of 39,191.51, a level that reduces concern in this context.\n- Transaction occurred on weekday 4 (mid-week), which decreases suspicion."
+}

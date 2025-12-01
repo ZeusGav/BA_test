@@ -1,0 +1,32 @@
+{
+  "probability": 0.0005262194899842143,
+  "top_features": [
+    {
+      "feature": "Payment Format_Wire",
+      "value": 1.0,
+      "shap_value": -4.06295919418335
+    },
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.8026444911956787
+    },
+    {
+      "feature": "Amount Received",
+      "value": 273.57,
+      "shap_value": -0.7494791150093079
+    },
+    {
+      "feature": "Hour",
+      "value": 1.0,
+      "shap_value": -0.6563323736190796
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 273.57,
+      "shap_value": -0.3776145279407501
+    }
+  ],
+  "explanation_short": "The transaction is assigned a very low suspiciousness probability (0.0005) because the observed attributes align with lower-risk patterns. The combination of payment format, small and matching amounts, absence of ACH routing, and the transaction hour do not exhibit indicators typically associated with elevated risk.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_Wire = 1.0 \u2014 routed as a wire transfer, which in this context corresponds to routine bank-to-bank movement and reduces concern.\n- Payment Format_ACH = 0.0 \u2014 no ACH routing, removing a channel that can sometimes be linked to higher-risk settlement behavior.\n- Amount Received = 273.57 \u2014 the transaction value is relatively low, lowering monetary risk indicators.\n- Amount Paid = 273.57 \u2014 equal paid and received amounts suggest no obvious value manipulation or layering in this single event.\n- Hour = 1.0 \u2014 the transaction time falls into a period that, based on expected customer behavior, does not raise timing-related concerns."
+}

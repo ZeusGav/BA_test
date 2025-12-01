@@ -1,0 +1,32 @@
+{
+  "probability": 0.10856708884239197,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.178189992904663
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.6147955656051636
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 429.11,
+      "shap_value": -0.4318760931491852
+    },
+    {
+      "feature": "Amount Received",
+      "value": 429.11,
+      "shap_value": -0.3168492615222931
+    },
+    {
+      "feature": "Payment Currency_Swiss Franc",
+      "value": 1.0,
+      "shap_value": 0.21066586673259735
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.1086) because it was processed by credit card, is not an ACH transfer, and involves a moderate, matching paid/received amount; these factors reduce indicators of concern. The use of Swiss francs, however, elevates scrutiny and is the primary factor increasing risk.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH transfer reduces indicators linked to automated account-to-account movement.\n- Payment Format_Credit Card = 1.0 \u2014 credit card use tends to decrease risk due to established payment\u2011processor controls and traceability.\n- Amount Paid = 429.11 \u2014 a moderate transaction amount, which typically lowers suspicion compared with high\u2011value transfers.\n- Amount Received = 429.11 \u2014 identical paid and received amounts reduce signs of layering or value divergence.\n- Payment Currency_Swiss Franc = 1.0 \u2014 use of Swiss francs increases scrutiny due to jurisdictional and correspondent\u2011banking considerations."
+}

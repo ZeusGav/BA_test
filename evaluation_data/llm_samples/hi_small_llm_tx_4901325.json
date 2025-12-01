@@ -1,0 +1,32 @@
+{
+  "probability": 0.1766536384820938,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.6366026401519775
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.32916268706321716
+    },
+    {
+      "feature": "Amount Received",
+      "value": 956.4,
+      "shap_value": -0.19991488754749298
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 956.4,
+      "shap_value": 0.15778326988220215
+    },
+    {
+      "feature": "Payment Currency_US Dollar",
+      "value": 1.0,
+      "shap_value": -0.12482061982154846
+    }
+  ],
+  "explanation_short": "The transaction\u2019s suspiciousness probability is relatively low (about 17.7%) because several observed attributes are consistent with lower-risk patterns, though one attribute increases concern. Overall, the combination of payment format, settled currency, and the received amount reduce suspicion while the matching outbound payment raises a note of caution.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 (decreases suspicion): no ACH involvement, which in this context is associated with lower risk.\n- Payment Format_Cheque = 1.0 (decreases suspicion): the payment was processed by cheque, a format here linked to reduced concern.\n- Amount Received = 956.4 (decreases suspicion): the received amount is moderate and consistent with expected customer activity.\n- Amount Paid = 956.4 (increases suspicion): the outgoing payment equals the incoming amount, which may indicate rapid passthrough and increases scrutiny.\n- Payment Currency_US Dollar = 1.0 (decreases suspicion): the transaction was settled in US dollars, a currency associated with lower contextual risk."
+}

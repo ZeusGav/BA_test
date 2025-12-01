@@ -1,0 +1,32 @@
+{
+  "probability": 0.1303035318851471,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.9583775997161865
+    },
+    {
+      "feature": "Payment Currency_Yuan",
+      "value": 1.0,
+      "shap_value": -0.5293943881988525
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.4269201159477234
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 14710.33,
+      "shap_value": 0.26110580563545227
+    },
+    {
+      "feature": "Weekday",
+      "value": 2.0,
+      "shap_value": -0.22280974686145782
+    }
+  ],
+  "explanation_short": "The transaction\u2019s assessed suspiciousness is low (0.1303) because several attributes linked to lower risk are present, although the payment size raises some concern. Overall, the factors that reduce suspicion outweigh the factor that increases it, resulting in the low probability.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH-related attributes in this record is associated with decreased suspicion.\n- Payment Currency_Yuan = 1.0 \u2014 payment in Yuan is associated with decreased suspicion for this assessment.\n- Payment Format_Cheque = 1.0 \u2014 use of cheque format is associated with decreased suspicion.\n- Amount Paid = 14,710.33 \u2014 the relatively large payment amount increases suspicion and warrants attention.\n- Weekday = 2.0 \u2014 the transaction occurring on this weekday is associated with decreased suspicion."
+}

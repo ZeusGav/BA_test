@@ -1,0 +1,32 @@
+{
+  "probability": 0.07007171958684921,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.4900552034378052
+    },
+    {
+      "feature": "Weekday",
+      "value": 4.0,
+      "shap_value": -0.6344960331916809
+    },
+    {
+      "feature": "Receiving Currency_Rupee",
+      "value": 1.0,
+      "shap_value": -0.627796471118927
+    },
+    {
+      "feature": "Amount Received",
+      "value": 57763.11,
+      "shap_value": -0.21842046082019806
+    },
+    {
+      "feature": "Payment Format_Credit Card",
+      "value": 1.0,
+      "shap_value": -0.17781105637550354
+    }
+  ],
+  "explanation_short": "The transaction has a low suspiciousness probability because its observed characteristics align with typical, low-risk activity for this profile. Payment method, currency, timing, and the received amount all point toward reduced concern.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment format: credit card used (Payment Format_Credit Card = 1.0), which in this context is associated with lower risk.\n- Payment format: ACH not used (Payment Format_ACH = 0.0), reducing indicators of concern compared with ACH activity.\n- Timing: occurred on weekday = 4 (Thursday), consistent with normal business-day patterns and lowering suspicion.\n- Currency and amount: received in Indian Rupee (Receiving Currency_Rupee = 1.0) for an amount of 57,763.11, which is consistent with expected flows and decreases risk."
+}

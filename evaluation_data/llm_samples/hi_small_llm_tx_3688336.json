@@ -1,0 +1,32 @@
+{
+  "probability": 0.014473526738584042,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.5595424175262451
+    },
+    {
+      "feature": "Amount Received",
+      "value": 823.03,
+      "shap_value": -1.2917332649230957
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 823.03,
+      "shap_value": -0.6360979080200195
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.4063277244567871
+    },
+    {
+      "feature": "Hour",
+      "value": 21.0,
+      "shap_value": -0.3094596862792969
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.0145) because several observed attributes align with lower-risk patterns. The combination of payment format, matching amounts, and transaction timing reduces indicators of unusual activity.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH use is associated here with lower suspicion.\n- Amount Received = 823.03 \u2014 a moderate received amount that does not appear unusual in isolation, decreasing concern.\n- Amount Paid = 823.03 \u2014 equal paid and received amounts suggest no unexplained value transfer, reducing suspicion.\n- Payment Format_Cheque = 1.0 \u2014 use of cheque in this instance is associated with lower risk.\n- Hour = 21.0 \u2014 transaction time (21:00) in this context is associated with lower suspicion."
+}

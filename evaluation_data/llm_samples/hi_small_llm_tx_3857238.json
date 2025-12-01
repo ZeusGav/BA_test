@@ -1,0 +1,32 @@
+{
+  "probability": 0.04667402431368828,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.2024916410446167
+    },
+    {
+      "feature": "Amount Received",
+      "value": 324.59,
+      "shap_value": -1.053594946861267
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 324.59,
+      "shap_value": -0.42725640535354614
+    },
+    {
+      "feature": "Hour",
+      "value": 5.0,
+      "shap_value": -0.39944982528686523
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.31411048769950867
+    }
+  ],
+  "explanation_short": "The transaction's low suspiciousness probability (0.0467) reflects multiple benign indicators in the record: the payment is a cheque, not ACH, for a modest amount with identical paid and received values and an early-morning timestamp. These attributes together are consistent with routine, low-risk settlement behavior and therefore reduce the overall alert score.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 (decreases suspicion) \u2014 absence of ACH routing in this payment.\n- Amount Received = 324.59 (decreases suspicion) \u2014 relatively small monetary value.\n- Amount Paid = 324.59 (decreases suspicion) \u2014 paid and received amounts match, indicating straightforward settlement.\n- Hour = 5.0 (decreases suspicion) \u2014 executed in the early morning, consistent with scheduled or routine processing.\n- Payment Format_Cheque = 1.0 (decreases suspicion) \u2014 payment made by cheque, which in this context aligns with lower-risk patterns."
+}

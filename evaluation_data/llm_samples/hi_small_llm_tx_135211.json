@@ -1,0 +1,32 @@
+{
+  "probability": 0.03314708173274994,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.2481238842010498
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 57311.56,
+      "shap_value": -0.8594565391540527
+    },
+    {
+      "feature": "Hour",
+      "value": 0.0,
+      "shap_value": -0.617548406124115
+    },
+    {
+      "feature": "Payment Currency_Euro",
+      "value": 1.0,
+      "shap_value": -0.4755162000656128
+    },
+    {
+      "feature": "Payment Format_Cash",
+      "value": 1.0,
+      "shap_value": -0.31942132115364075
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.0331) because the available payment attributes point away from the typical risk patterns flagged by the screening process. The top contributing factors shown here are each associated with reducing concern for this case, so no strong risk enhancers appear among them.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH is associated with decreased suspicion in this instance.\n- Amount Paid = 57,311.56 \u2014 the recorded amount is associated with decreased suspicion in this context.\n- Hour = 0.0 \u2014 the transaction time corresponds to the reference hour and is associated with decreased suspicion.\n- Payment Currency_Euro = 1.0 \u2014 payment in euros is associated with decreased suspicion.\n- Payment Format_Cash = 1.0 \u2014 the cash payment attribute is, in this record, associated with decreased suspicion."
+}

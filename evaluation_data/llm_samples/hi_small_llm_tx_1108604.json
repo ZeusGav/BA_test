@@ -1,0 +1,32 @@
+{
+  "probability": 1.1414907021389809e-05,
+  "top_features": [
+    {
+      "feature": "SameAccount",
+      "value": 1.0,
+      "shap_value": -2.526278018951416
+    },
+    {
+      "feature": "SameBank",
+      "value": 1.0,
+      "shap_value": -2.4593253135681152
+    },
+    {
+      "feature": "Payment Currency_Yuan",
+      "value": 1.0,
+      "shap_value": -1.3261655569076538
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 93.48,
+      "shap_value": -1.2909718751907349
+    },
+    {
+      "feature": "Hour",
+      "value": 23.0,
+      "shap_value": -1.2303268909454346
+    }
+  ],
+  "explanation_short": "This transaction receives a very low suspiciousness probability because the observed attributes align with routine, low-risk behavior and no high-risk signals were present. Factors such as intra-account movement, same-bank processing, local currency, a modest amount, and the transaction timing collectively decreased the assessed risk.",
+  "explanation_detailed": "Key risk-relevant factors:\n- SameAccount = 1.0 \u2014 movement stayed within the same account, which decreases suspicion.\n- SameBank = 1.0 \u2014 transaction occurred within the same bank, reducing counterparty risk.\n- Payment Currency = Yuan \u2014 use of local currency consistent with the account profile decreases cross-border/currency risk.\n- Amount Paid = 93.48 \u2014 relatively low transaction value, which lowers risk for layering or large-scale laundering.\n- Hour = 23.0 \u2014 late-evening timing was observed but did not increase suspicion in this case."
+}

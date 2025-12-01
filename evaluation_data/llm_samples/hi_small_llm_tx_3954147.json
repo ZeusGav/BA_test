@@ -1,0 +1,32 @@
+{
+  "probability": 0.06744465976953506,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.2046372890472412
+    },
+    {
+      "feature": "Amount Received",
+      "value": 184.82,
+      "shap_value": -0.6942710876464844
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 184.82,
+      "shap_value": -0.5736305117607117
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.401529461145401
+    },
+    {
+      "feature": "Payment Currency_US Dollar",
+      "value": 1.0,
+      "shap_value": -0.15163283050060272
+    }
+  ],
+  "explanation_short": "This transaction has a low suspiciousness probability (0.0674, or 6.74%), indicating limited indicators of money laundering based on the reviewed attributes. The primary reasons are the use of a cheque in US dollars and the identical, modest paid and received amounts, together with the absence of ACH activity, which collectively reduce concern.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Absence of ACH payment (Payment Format_ACH = 0.0): no ACH channel detected, which here reduces suspicion.\n- Modest transaction amount (Amount Received = $184.82): relatively low value, which lowers the likelihood of layering/structuring.\n- Matching paid and received amounts (Amount Paid = $184.82): symmetry between inflow and outflow is consistent with a straightforward transfer.\n- Cheque payment in US dollars (Payment Format_Cheque = 1.0; Payment Currency_US Dollar = 1.0): payment method and currency align with patterns associated with lower risk in this context."
+}

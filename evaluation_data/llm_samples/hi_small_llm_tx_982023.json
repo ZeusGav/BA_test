@@ -1,0 +1,32 @@
+{
+  "probability": 0.07086155563592911,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.8028455972671509
+    },
+    {
+      "feature": "Amount Received",
+      "value": 6844.86,
+      "shap_value": -0.7628525495529175
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5012339353561401
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 6844.86,
+      "shap_value": 0.23311066627502441
+    },
+    {
+      "feature": "Hour",
+      "value": 20.0,
+      "shap_value": -0.22860825061798096
+    }
+  ],
+  "explanation_short": "This transaction is assessed as low risk (suspiciousness probability 0.0709) because several attributes lower concern while one factor raises a minor concern. The absence of ACH, presence of a cheque payment, a moderate received amount, and the late-hour timing reduce suspicion, whereas the matching amount paid slightly increases it.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_ACH = 0.0 \u2014 absence of ACH reduces suspicion.\n- Amount Received = 6844.86 \u2014 moderate received amount reduces suspicion.\n- Payment Format_Cheque = 1.0 \u2014 cheque payment reduces suspicion.\n- Amount Paid = 6844.86 \u2014 outgoing amount equal to received increases suspicion.\n- Hour = 20.0 \u2014 transaction at 20:00 reduces suspicion."
+}

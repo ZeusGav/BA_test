@@ -1,0 +1,32 @@
+{
+  "probability": 0.07670995593070984,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.7002454996109009
+    },
+    {
+      "feature": "Amount Received",
+      "value": 874.62,
+      "shap_value": -0.8434155583381653
+    },
+    {
+      "feature": "Hour",
+      "value": 3.0,
+      "shap_value": -0.3121162950992584
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.24851886928081512
+    },
+    {
+      "feature": "Receiving Currency_US Dollar",
+      "value": 0.0,
+      "shap_value": -0.12178736180067062
+    }
+  ],
+  "explanation_short": "The transaction shows a low suspiciousness probability (7.67%) because the recorded attributes are associated with lower risk in the monitoring criteria. No strong risk-enhancing indicators are present for this record, so the overall score remains low.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Payment Format_Cheque = 1.0 \u2014 presence of a cheque payment in this record is associated with reduced suspicion.\n- Payment Format_ACH = 0.0 \u2014 absence of an ACH payment here is associated with reduced suspicion.\n- Amount Received = 874.62 \u2014 the transaction amount is moderate and is not indicative of elevated risk in this context.\n- Hour = 3.0 \u2014 the transaction time (03:00) does not correspond to a higher-risk time window for this profile.\n- Receiving Currency_US Dollar = 0.0 \u2014 the transaction not being in US Dollars is associated with reduced suspicion in this instance."
+}

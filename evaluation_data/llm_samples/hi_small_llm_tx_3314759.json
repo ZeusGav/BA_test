@@ -1,0 +1,32 @@
+{
+  "probability": 0.04346882924437523,
+  "top_features": [
+    {
+      "feature": "Payment Format_ACH",
+      "value": 0.0,
+      "shap_value": -1.7749806642532349
+    },
+    {
+      "feature": "Amount Received",
+      "value": 3769.45,
+      "shap_value": -1.0421191453933716
+    },
+    {
+      "feature": "Amount Paid",
+      "value": 3769.45,
+      "shap_value": 0.6266560554504395
+    },
+    {
+      "feature": "Payment Format_Cheque",
+      "value": 1.0,
+      "shap_value": -0.5815854072570801
+    },
+    {
+      "feature": "Weekday",
+      "value": 2.0,
+      "shap_value": -0.4568207561969757
+    }
+  ],
+  "explanation_short": "The low suspiciousness probability (0.0435) indicates limited indicators of concern for this transaction based on the recorded attributes. Several attributes reduce overall suspicion, while the identical paid and received amounts generate a modest increase in risk.",
+  "explanation_detailed": "Key risk-relevant factors:\n- Not an ACH transfer (Payment Format_ACH = 0.0) \u2014 associated here with lower risk.\n- Payment made by cheque (Payment Format_Cheque = 1.0) \u2014 associated here with lower risk.\n- Transaction occurred on a weekday (Weekday = 2.0) \u2014 associated here with lower risk.\n- Amount received of 3,769.45 \u2014 moderate size, associated here with lower risk.\n- Amount paid of 3,769.45 \u2014 identical paid and received amounts increase suspicion (possible pass-through or mirror payment)."
+}
